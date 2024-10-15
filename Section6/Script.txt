@@ -1,0 +1,316 @@
+In this video, we're going to follow up on a raise by discussing a very similar data structure called
+
+a tuple.
+
+And you'll sometimes also hear this pronounced as tuple, totally up to you, either tuple or tuple.
+
+Either way, you want to do it.
+
+So as usual, definition examples and so on.
+
+All right.
+
+So first off, quick definition.
+
+So when we are working with a tuple or a tuple, we have something that looks very similar to an array,
+
+    very, very similar.
+
+But the big difference here is that we are going to have every element inside of this array looking
+
+thing represent one specific property about some record.
+
+So whereas an array tells us a bunch of different records or organizes a collection of different records,
+
+    a tuple usually contains multiple different properties to describe one single thing.
+
+And as a follow up to that, usually inside of a tuple, we will mix and match many different types
+
+of data inside there.
+
+So let's take a look at a quick example.
+
+All right.
+
+I want you to imagine that we've got some object, like the one you see right here.
+
+And the goal of this object is to represent a drink, like, in this case, soda or pop, whatever you
+
+want to refer to it as.
+
+So maybe inside this object, we have a color property that is a string of brown carbonated, that is
+
+a boolean of true and sugar that is meant to represent the sugar content of the soda in grams.
+
+So that will be a number here.
+
+So as you might guess, this would represent maybe like Coca - Cola or Pepsi or something like that.
+
+So representing a drink or a soda with an object like this, I think makes a lot of sense if you're
+
+coming particularly from a JavaScript background.
+
+    We've got one object to represent one drink, and this object has some properties that describe what
+
+is going on with this singular drink.
+
+    Now, just for fun.
+
+I want to take this object right here, and I just want to try to represent it with a slightly different
+
+data structure.
+
+    Let's try to represent this object with an array instead.
+
+So how can we do that ?
+
+    Well, maybe we would say that we would take each of these values.
+
+        So, like Brown.
+
+            True.
+
+And then 40.
+
+And stick them into this array like so.
+
+So now we have a slightly different looking data structure that still represents a drink.
+
+In turning this into this array right here, we have lost a little bit of information.
+
+In other words, you and I, as developers, can very easily look at a object declaration like this
+
+right here and very quickly understand the colors.
+
+Brown carbonated is true and sugar is 40.
+
+When we start to represent this object as an array, we've lost those different property labels on here.
+
+And so you and I, as developers, would have to memorize the fact that the first element inside this
+
+array is supposed to be a string representing the color.
+
+The second element is supposed to be a boolean representing whether or not the drink is carbonated.
+
+And then the third element inside there is a number representing these sugar content.
+
+So the big difference between representing this as an object and something that looks like an array
+
+is really just that loss of information in these labels no longer is our code really self labeling.
+
+    Instead, we have to kind of memorize the order of properties inside of here.
+
+So this is exactly what a tuple is.
+
+We have what looks like an array and we put in our property values into that array in a very specific
+
+order.
+
+So the ordering part is really critical.
+
+If we start to arbitrarily swap around elements inside of here, we are no longer going to understand
+
+which different value represents which property.
+
+So if you and I have memorized like as developers, that this array is always supposed to tell us the
+
+color, then the carbonation and then the sugar content, and we swap some elements inside of here and
+
+we don't have those labels.
+
+Now, this is kind of a meaningless record because we're now trying to indicate that our color is 40,
+
+carbonation is true, and sugar content is brown.
+
+So when we work with a tuple, we have a fixed series of elements or a fixed order, I should say.
+
+All right.
+
+    Now, let's take a quick pause right here.
+
+We're going to come back the next section.
+
+Get some more examples around tuples and start to write out some code around them.
+
+So a quick pause and I'll see you in just a minute.
+
+
+
+//
+Now that we've got a basic understanding of what a tuple is, let's start writing out a little bit of
+
+code to understand how we work with them in TypeScript.
+
+So back inside my editor, I'm going to make another new file inside my project directory called Tuples.
+
+It's.
+
+Then inside of here to get started, I'm going to write out an object that looks like that drink object
+
+that we just put together or was inside that diagram.
+
+So I'll say console drink is going to be an object with a color of brown.
+
+Carbonated is true and sugar.
+
+Is oh 40.
+
+Like so.
+
+So a object works perfectly here, right?
+
+You and I can read this and very easily understand what's going on.
+
+However, we have access to tuples as well, so we could alternatively try to represent this with a
+
+tuple.
+
+To do so, we could write out, let's say, some new drink here, like maybe Pepsi.
+
+And I'm going to write out what looks like an array.
+
+And I'm basically just going to take the different values of this object and put them into this array
+
+in a very specific order.
+
+So I'll put in Brown to represent the color then.
+
+True to say that it's carbonated and then 42 represent these sugar content in this case, like 40 grams,
+
+say.
+
+Now here's the only issue.
+
+What we just defined right here is an array.
+
+So if you hover over Pepsi right here, take a look at that type annotation.
+
+This is saying that Pepsi is going to be a string or a number or a Boolean array.
+
+So the issue right now is that we could freely swap the order of elements inside of here.
+
+And in general, we don't want to do that because remember, the order inside of a tuple has a very
+
+specific meaning to us.
+
+You and I, as developers have to memorize that.
+
+The first element inside of here represents a color, and then the second element represents carbonation,
+
+and the third represents sugar content.
+
+So if you and I start to write out some code that's going to swap the order, like let's say Pepsi at
+
+zero is now going to be 40 and Pepsi at two is now going to be Brown.
+
+We have lost information.
+
+So you and I, as developers have an assumption about the order of elements inside of here.
+
+And if we start to break that order, our data model completely breaks down.
+
+So we're not going to define this thing as a simple looking array in TypeScript.
+
+Instead, we're going to add on an annotation to this thing.
+
+This annotation is what's going to turn this line or this array right here into a tuple.
+
+So right after Pepsi, I'm going to put in a colon.
+
+And then rather than putting out a type right here and then square brackets, I'm going to instead put
+
+in a pair of square brackets.
+
+And then inside of here, we're going to write out the specific order of types of elements inside of
+
+this tuple.
+
+So I'm going to write string, then boolean, then number like so.
+
+So this is what makes this thing into a tuple as opposed to an array.
+
+We are saying that this array is going to always have a very consistent ordering of elements inside
+
+of it.
+
+Always a string, then a boolean, then a number.
+
+So you and I, as developers, can read this thing right here and understand that there is some meaning
+
+to the order of elements inside of this array looking thing, or I should say, tuple.
+
+If we now try to change the order of elements inside of here and say say Pepsi at zero is now going
+
+to be 40, will very quickly get an error message.
+
+The error message is going to tell us that we're trying to assign a number to an index inside that tuple
+
+that is supposed to be a string.
+
+So again, by putting on this different looking type annotation right here we are turning this array
+
+into a tuple.
+
+An alternate way of writing this thing out right here, rather than putting the type directly in line
+
+as an annotation would be to create something called a type alias.
+
+We're going to discuss type aliases at great length later on inside this course, but this is a very
+
+good place to use a type alias, so we're just going to cover them very quickly.
+
+Right now as a quick aside.
+
+So rather than having to repeat out this definition right here, every time we want to create a drink,
+
+we can instead right above write out type and then maybe drink with a capital D and then we'll list
+
+out the tuple structure.
+
+So it's going to be a string boolean and then number.
+
+This does not create an array right here, so no array is being created.
+
+Instead, it's creating the idea of a tuple inside of our application.
+
+It's a brand new type that we can freely use in any place that we would normally put a type, for example,
+
+in a type annotation.
+
+So now, rather than manually writing out all the different types right here, I could instead say drink
+
+like so.
+
+And this is a 100% equivalent to what we just had a moment before.
+
+So now I can very easily reuse this tuple structure and say, maybe Sprite.
+
+Is also a type of drink and it will be clear it is carbonated and maybe also has a lot of sugar and
+
+maybe we also have tea.
+
+That is a drink and maybe it's also brown, not carbonated and zero sugar like so.
+
+So we've now abstracted out the idea of what a drink is into a type alias.
+
+Now we can freely reuse it throughout our application to indicate that each of these different things
+
+are not plain arrays.
+
+Instead, they are a tuple that represents a very specific record inside of our application.
+
+All right.
+
+Now, I'm going to be honest with you.
+
+We are not going to use tuples very often.
+
+So let's take a quick pause right here.
+
+We're going to come back to the next video.
+
+We're going to discuss why we care about these things and where we're going to use them.
+
+And we're going to find out that maybe tuples are not super useful in TypeScript.
+
+So quick pause and I'll see you in just a minute.

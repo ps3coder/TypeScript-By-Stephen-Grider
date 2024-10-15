@@ -1,0 +1,56 @@
+
+• Intro to type annotations and type interface
+
+- These are two different systems in TS but are discussed together for clarity
+- They apply differently to variables , functions and objects
+- We'll cover type annotations and interface for variables first then functions and objects
+
+• Type annotations
+- A small piece of code written to tell TS what type a variable refers to
+
+• Type interface
+- TS automatically determines what type a variable rerfers to 
+
+• Comparison of Type annotations and Type interface
+
+- Both relate to the type of value a variable refers to
+- In type annotations the developer mannually specify the type
+- In type interface TS automatically determines the type
+- They are somewhat opposed manual specification vs automatic type deduction
+
+• Key focus of the discussion
+
+- The main question should we manually specify type or leave it to TS
+- understanding why these features are important and when to use them
+
+• the rule of thumb here is if we're doing the initialization and declaration on the same
+• Type inference allows TS to determine variable types without explicit annotations.
+• Variable declaration and initialization happen in two steps
+1. declaration(left of the equal sign)
+2. Initialization(right of the equal sign)
+•Type inference occurs when declaration and initialization are on the same line allowing TS to infer the type of the variable.
+• If initialization happens separately , Ts assign the type any and type inference does not occur.
+• TS uses type inference by default when declaration and initilization occur together.
+• Type annotations should be manually added in specific cases.
+• Three scenarios required type annotations
+• in most cases rely on type inference to reduce the need for manual annotation.
+
+
+• we know that type inference in TS often inferes type automatically throughout the application.
+• Manual Type annotations : There are certain cases where we need to manually add type annotations to help TS along.
+• Three scenarios for type annotations: We'll focus on these scenarios where manual types annotations are neccessary
+
+
+Case1 : Functions returningn any TYpe : refer variables.ts for more details
+
+• Problems with any type:
+-json.parse return any because TS cant predict what it will return 
+- we should add a type annotations for variables returned by json.parse
+
+• TYpe annotations for objects:
+ : add types annotations for each element 
+
+
+• Solutions:
+- Use boolean | nummber via a pipe to allow multiple types
+
