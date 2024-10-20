@@ -1,12 +1,19 @@
-import faker from '@faker-js/faker'
+import { faker } from '@faker-js/faker';
 
-class User {
+export const red = 'red';
+
+export class User {
     name: string;
     location: {
-        lat: number;
-        lag: number;
+        lat: number; 
+        lng: number;
     };
     constructor() {
+        this.name = faker.person.fullName();
 
-    };
+        this.location = {
+            lat: faker.location.latitude(),
+            lng: faker.location.longitude()
+        };
+    }
 }
