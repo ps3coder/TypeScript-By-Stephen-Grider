@@ -330,3 +330,9 @@ you will have to install it separately.
 All right.
 
 So let's take a pause right here and we'll continue in the next video.
+
+
+<!-- API -->
+AIzaSyBNLrJhOMz6idD05pzfn5lhA-TAw-mAZCU
+
+&callback=Function.prototype
