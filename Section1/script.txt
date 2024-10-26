@@ -1,0 +1,38 @@
+--> Lec4
+• TS is essential JS with added syntax for a type system
+• It helps to catch errors during development by adding type annotations 
+• JS fetures ensure during developemtn by adding type annotations to the coed
+• The type system analyzes code during development flagginf potential bugs in real time code
+• Type annotations describe the purpose and flow of data in the code 
+• The TS compiler converts TS into plain JS which is executed in browser or NodeJS 
+• TS is only used to development and the type system does not affect the final outpit or performance optimization
+• Think of TS as a helpfull assistant catching errors while you write a code without impacting how the code is executed.
+
+--> Lec7
+• Make a network request to fetch some json and print the result
+https://jsonplaceholder.typicode.com/todos
+
+• Goal: Create a simple Type script application that fetch data from an external API and prints it to the terminal
+• Purpose : Demonstrate the typical workflow of type script and how it helps to catch bugs during development
+• Steps : 
+
+1. API selection : Use a face API to fetch data for testing and learning :https://jsonplaceholder.typicode.com/todos/1 
+2. Create a Project repo: Create a new folder called FetchJSON initialize the project with npm init -y
+3. install axios
+4. File setup : OPen the project code editor & verify the presence of package.json and node_modules 
+ https://jsonplaceholder.typicode.com/todos/1
+
+ --> Lec8
+• Streamlining execution
+: to combine the compile an run steps use the ts-node module 
+: Run typescript directly with ts-node index.ts to compile and excute in one 
+
+--> lec9
+• Only getting particullar values from responce.data
+
+--> lec 10 & 11
+
+• create a interface ToDo with properties
+id: number
+title: string
+completed: boolean

@@ -1,0 +1,20 @@
+--> Lecture 13
+
+Basic types in TS
+•types : A type is an easy way to refer to the properties and functions that a value has.
+• A value can be anything assigned to a variable : string , numbers , booleans , null , undefined , objects , functions , classes and arrays etc.
+• We need to understand a type involves recognizing the properties and methods it has.
+For Ex: CharAt() , concat , includes , indexOf
+• Importance : Every value in TS has a type , providing a way to describe what the value represent 
+
+
+--> Lecture 14
+• Categories of types 
+
+1) primitives type : Number , string , booleans , null , undefined , symbol , void
+2) Object types : Functions , classes , Arrays , objects
+
+
+• Why types matter
+1. Error detection
+2. Code clearity
