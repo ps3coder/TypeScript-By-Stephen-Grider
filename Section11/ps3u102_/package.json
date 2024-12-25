@@ -1,0 +1,19 @@
+{
+  "name": "ps3u102_",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start:builld": "tsc -w",
+    "start:run": "nodemon build/index.js",
+    "start": "concurrently npm:start:*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/node": "^22.9.3",
+    "concurrently": "^9.1.0",
+    " ": "^3.1.7"
+  }
+}
