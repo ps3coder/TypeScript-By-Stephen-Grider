@@ -1,0 +1,4 @@
+inside the tsconfig.json
+
+experimentalDecorators true
+emitDecoratorMetadata true
